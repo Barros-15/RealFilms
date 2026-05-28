@@ -26,3 +26,49 @@
         }
         .bg-asphalt { background-color: #222222; }
 
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+        }
+
+        .slider-track {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        a,
+        span,
+        li {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 767px) {
+            .octagon-clip {
+                clip-path: polygon(12% 0%, 88% 0%, 100% 12%, 100% 88%, 88% 100%, 12% 100%, 0% 88%, 0% 12%);
+            }
+
+            .reveal {
+                transform: translateY(18px);
+            }
+
+            .material-symbols-outlined {
+                line-height: 1;
+            }
+        }
+

@@ -90,7 +90,7 @@
                     "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
                     "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
                     "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "0", "fontWeight": "900"}],
                     "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
                     "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
             }
@@ -102,7 +102,7 @@
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white">
 <!-- Header / Nav Shell -->
 <header class="sticky top-0 w-full z-50 bg-surface border-b border-primary-container/30">
-<div class="max-w-[1280px] mx-auto flex flex-col items-center py-4 px-margin-desktop gap-4">
+<div class="max-w-[1280px] mx-auto flex flex-col items-center py-4 px-4 md:px-margin-desktop gap-4">
 <!-- Central Brand Identity -->
 <div class="text-center group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><img alt="Real Film's Logo" class="h-16 mx-auto mb-4 transition-transform group-hover:scale-105" src="assets/stitch-image-20.png"/>
 <div class="flex justify-center gap-8 mt-2">
@@ -111,7 +111,7 @@
 <a class="text-on-surface hover:text-primary-container transition-all transform hover:-translate-y-1" href="https://maps.app.goo.gl/AmNMaSdDdU6unyMv8" target="_blank"><div class="w-8 h-8 overflow-hidden relative"><img alt="Location" class="w-full h-full object-contain" src="assets/stitch-image-04.jpg"/></div></a>
 </div></div>
 <!-- Navigation Links -->
-<nav class="flex gap-12 mt-4">
+<nav class="flex flex-wrap justify-center gap-x-5 gap-y-3 md:gap-12 mt-4">
 <a class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1 font-bold" href="#home">HOME</a>
 <a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors duration-300" href="#instituicao">INSTITUIÇÃO</a>
 <a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors duration-300" href="#servicos">SERVIÇOS</a>
@@ -121,8 +121,8 @@
 </header>
 <main>
 <!-- Hero Section -->
-<section class="max-w-[1280px] mx-auto px-margin-desktop py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[70vh]" id="home">
-<div class="slider-container aspect-[4/5] rounded-lg border-2 border-primary-container/20 overflow-hidden shadow-2xl">
+<section class="max-w-[1280px] mx-auto px-4 md:px-margin-desktop py-8 md:py-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center md:min-h-[70vh]" id="home">
+<div class="slider-container aspect-[4/3] sm:aspect-[4/5] rounded-lg border-2 border-primary-container/20 overflow-hidden shadow-2xl">
 <div class="slider-track h-full" id="hero-slider" style="transform: translateX(-400%);">
 <div class="slider-item h-full bg-center bg-cover" style='background-image: url("assets/stitch-image-05.jpg");'></div>
 <div class="slider-item h-full bg-center bg-cover" style='background-image: url("assets/stitch-image-06.jpg");'></div>
@@ -132,25 +132,25 @@
 </div>
 </div>
 <div class="reveal active">
-<h2 class="font-display-lg text-display-lg text-on-surface uppercase leading-none mb-8">
+<h2 class="font-display-lg text-[38px] sm:text-[48px] md:text-display-lg text-on-surface uppercase leading-tight md:leading-none mb-6 md:mb-8">
                     Qualidade e <span class="text-primary-container">experiência</span>
 </h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md border-l-4 border-primary-container pl-6 py-2">
                     Em películas automotivas e soluções personalizadas para o seu veículo, residência ou empresa. Mais que estética, proteção e tecnologia.
                 </p>
 <div class="mt-10">
-<a class="inline-block bg-primary-container text-white px-10 py-4 font-label-bold text-label-bold uppercase tracking-widest hover:bg-red-800 transition-all transform hover:scale-105 active:scale-95" href="https://wa.me/5541998439673">
+<a class="inline-block bg-primary-container text-white px-6 sm:px-10 py-4 font-label-bold text-label-bold uppercase tracking-widest hover:bg-red-800 transition-all transform hover:scale-105 active:scale-95" href="https://wa.me/5541998439673">
                         Fale com um Especialista
                     </a>
 </div>
 </div>
 </section>
 <!-- Services Section -->
-<section class="bg-surface-container-low py-24" id="servicos">
-<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<section class="bg-surface-container-low py-14 md:py-24" id="servicos">
+<div class="max-w-[1280px] mx-auto px-4 md:px-margin-desktop">
 <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
 <div>
-<h3 class="font-headline-lg text-headline-lg text-primary-container uppercase">Serviços Especializados</h3>
+<h3 class="font-headline-lg text-[30px] md:text-headline-lg text-primary-container uppercase">Serviços Especializados</h3>
 <div class="h-1 w-24 bg-primary-container mt-2"></div>
 </div>
 </div>
@@ -173,10 +173,10 @@
 </div>
 </div>
 <!-- Featured Service -->
-<div class="bg-surface-container-highest border-2 border-primary-container/30 p-12 reveal grid grid-cols-1 lg:grid-cols-2 gap-12 items-center active">
+<div class="bg-surface-container-highest border-2 border-primary-container/30 p-5 sm:p-8 md:p-12 reveal grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center active">
 <div>
 <span class="bg-primary-container text-white px-3 py-1 font-label-bold text-xs uppercase mb-4 inline-block">Destaque Especial</span>
-<h4 class="font-display-lg text-4xl font-black text-on-surface mb-6 uppercase">PLOTAGEM E INSULFILM</h4>
+<h4 class="font-display-lg text-[30px] sm:text-4xl font-black text-on-surface mb-6 uppercase">PLOTAGEM E INSULFILM</h4>
 <p class="text-body-lg text-on-surface mb-6 leading-relaxed">
                             Alta qualidade em película automotiva, residencial, predial e envelopamento. Soluções para valorizar seu veículo, proteger ambientes residenciais ou comerciais, ou transformar a identidade visual através do envelopamento profissional.
                         </p>
@@ -186,14 +186,14 @@
 <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span> Envelopamento Premium</li>
 </ul>
 </div>
-<div class="octagon-clip h-[400px] bg-center bg-cover border-4 border-primary-container/20" style='background-image: url("assets/stitch-image-08.jpg");'>
+<div class="octagon-clip h-[260px] sm:h-[340px] lg:h-[400px] bg-center bg-cover border-4 border-primary-container/20" style='background-image: url("assets/stitch-image-08.jpg");'>
 </div>
 </div>
 </div>
 </section>
 <!-- Gallery Section -->
-<section class="py-24 max-w-[1280px] mx-auto px-margin-desktop">
-<h3 class="font-headline-lg text-headline-lg text-center mb-16 uppercase">Nosso Portfólio em Ação</h3>
+<section class="py-14 md:py-24 max-w-[1280px] mx-auto px-4 md:px-margin-desktop">
+<h3 class="font-headline-lg text-[30px] md:text-headline-lg text-center mb-10 md:mb-16 uppercase">Nosso Portfólio em Ação</h3>
 <div class="slider-container rounded-xl overflow-hidden mb-12">
 <div class="slider-track" id="work-slider">
 <div class="slider-item grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -204,23 +204,23 @@
 </div>
 </div>
 <div class="text-center">
-<a class="font-label-bold text-label-bold text-primary-container border-2 border-primary-container px-12 py-4 hover:bg-primary-container hover:text-white transition-all uppercase tracking-widest inline-flex items-center gap-3" href="https://www.instagram.com/films_real/?hl=pt" target="_blank">
+<a class="font-label-bold text-label-bold text-primary-container border-2 border-primary-container px-6 sm:px-12 py-4 hover:bg-primary-container hover:text-white transition-all uppercase tracking-widest inline-flex items-center justify-center gap-3" href="https://www.instagram.com/films_real/?hl=pt" target="_blank">
                     VER MAIS TRABALHOS <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
 </a>
 </div>
 </section>
 <!-- Institution Section -->
-<section class="bg-surface py-24 border-t border-primary-container/10" id="instituicao">
-<div class="max-w-[1280px] mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<section class="bg-surface py-14 md:py-24 border-t border-primary-container/10" id="instituicao">
+<div class="max-w-[1280px] mx-auto px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 <div class="relative reveal active">
 <div class="absolute -top-4 -left-4 w-full h-full border-4 border-primary-container z-0"></div>
 <div class="relative z-10 grid grid-cols-2 gap-4">
-<img class="w-full h-full object-cover" data-alt="The modern storefront of Real Film's featuring professional branding and clean architectural lines. The facade is illuminated with dramatic lighting that highlights the red and black color scheme. It conveys a sense of established authority and reliability in the automotive service industry. High contrast and clean minimalism define the shot." src="assets/stitch-image-10.jpg"/>
-<img class="w-full h-full object-cover mt-8" data-alt="Portrait of the specialist at Real Film's standing proudly in the workshop. The environment is organized and filled with high-end automotive tools. Lighting is professional and moody, focusing on the expertise and commitment to quality. The overall tone is one of technical mastery and personal dedication." src="assets/stitch-image-05.jpg"/>
+<img class="w-full aspect-[4/5] object-cover" data-alt="The modern storefront of Real Film's featuring professional branding and clean architectural lines. The facade is illuminated with dramatic lighting that highlights the red and black color scheme. It conveys a sense of established authority and reliability in the automotive service industry. High contrast and clean minimalism define the shot." src="assets/stitch-image-10.jpg"/>
+<img class="w-full aspect-[4/5] object-cover mt-8" data-alt="Portrait of the specialist at Real Film's standing proudly in the workshop. The environment is organized and filled with high-end automotive tools. Lighting is professional and moody, focusing on the expertise and commitment to quality. The overall tone is one of technical mastery and personal dedication." src="assets/stitch-image-05.jpg"/>
 </div>
 </div>
 <div class="reveal active">
-<h3 class="font-headline-lg text-headline-lg text-primary-container mb-8 uppercase">A Real Film’s</h3>
+<h3 class="font-headline-lg text-[30px] md:text-headline-lg text-primary-container mb-8 uppercase">A Real Film’s</h3>
 <p class="font-body-lg text-body-lg mb-6 leading-relaxed">
                         Atuamos há mais de 15 anos no mercado paranaense, consolidando nossa marca através da excelência técnica e do compromisso inabalável com a satisfação de nossos clientes.
                     </p>
@@ -241,35 +241,35 @@
 </div>
 </section>
 <!-- Contacts & Map Section -->
-<section class="py-24 max-w-[1280px] mx-auto px-margin-desktop" id="contatos">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<section class="py-14 md:py-24 max-w-[1280px] mx-auto px-4 md:px-margin-desktop" id="contatos">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 <div class="reveal active">
-<h3 class="font-headline-lg text-headline-lg text-primary-container mb-12 uppercase">Onde Estamos</h3>
+<h3 class="font-headline-lg text-[30px] md:text-headline-lg text-primary-container mb-8 md:mb-12 uppercase">Onde Estamos</h3>
 <div class="space-y-10">
-<a class="flex items-center gap-6 group" href="https://wa.me/5541998439673" target="_blank">
-<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="WhatsApp" class="w-full h-full object-contain" src="assets/stitch-image-03.jpg"/></div></div>
-<div>
+<a class="flex items-center gap-4 sm:gap-6 group" href="https://wa.me/5541998439673" target="_blank">
+<div class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="WhatsApp" class="w-full h-full object-contain" src="assets/stitch-image-03.jpg"/></div></div>
+<div class="min-w-0">
 <p class="font-label-bold text-xs text-on-surface-variant uppercase">WhatsApp</p>
-<p class="font-headline-md text-headline-md">041 99843-9673</p>
+<p class="font-headline-md text-[22px] sm:text-headline-md break-words">041 99843-9673</p>
 </div>
 </a>
-<a class="flex items-center gap-6 group" href="https://www.instagram.com/films_real/?hl=pt" target="_blank">
-<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="Instagram" class="w-full h-full object-contain" src="assets/stitch-image-02.jpg"/></div></div>
-<div>
+<a class="flex items-center gap-4 sm:gap-6 group" href="https://www.instagram.com/films_real/?hl=pt" target="_blank">
+<div class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="Instagram" class="w-full h-full object-contain" src="assets/stitch-image-02.jpg"/></div></div>
+<div class="min-w-0">
 <p class="font-label-bold text-xs text-on-surface-variant uppercase">Instagram</p>
-<p class="font-headline-md text-headline-md">@FILMS_REAL</p>
+<p class="font-headline-md text-[22px] sm:text-headline-md break-words">@FILMS_REAL</p>
 </div>
 </a>
-<a class="flex items-center gap-6 group" href="https://maps.app.goo.gl/AmNMaSdDdU6unyMv8" target="_blank" rel="noopener noreferrer">
-<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="Location" class="w-full h-full object-contain" src="assets/stitch-image-04.jpg"/></div></div>
-<div>
+<a class="flex items-center gap-4 sm:gap-6 group" href="https://maps.app.goo.gl/AmNMaSdDdU6unyMv8" target="_blank" rel="noopener noreferrer">
+<div class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-surface-container-high flex items-center justify-center rounded-lg border border-primary-container/30 group-hover:bg-primary-container transition-colors"><div class="w-full h-full overflow-hidden relative p-1"><img alt="Location" class="w-full h-full object-contain" src="assets/stitch-image-04.jpg"/></div></div>
+<div class="min-w-0">
 <p class="font-label-bold text-xs text-on-surface-variant uppercase">Endereço</p>
-<p class="text-body-lg">R. Pedro Gusso, 762 - Novo Mundo, Curitiba - PR</p>
+<p class="text-body-lg break-words">R. Pedro Gusso, 762 - Novo Mundo, Curitiba - PR</p>
 </div>
 </a>
 </div>
 </div>
-<div class="reveal h-[500px] relative overflow-hidden rounded-xl border-4 border-surface-container-high group active">
+<div class="reveal h-[320px] md:h-[500px] relative overflow-hidden rounded-xl border-4 border-surface-container-high group active">
 <a class="block w-full h-full overflow-hidden" href="https://maps.app.goo.gl/AmNMaSdDdU6unyMv8" target="_blank">
 <div class="absolute inset-0 bg-primary-container/10 z-10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
 <img alt="Mapa interativo da localização" class="w-full h-full object-cover transition-transform duration-[20s] linear scale-110 group-hover:scale-100" data-location="Curitiba" src="assets/stitch-image-11.jpg"/>
@@ -285,7 +285,7 @@
 </main>
 <!-- Footer -->
 <footer class="w-full py-12 bg-surface-container-lowest border-t-2 border-primary-container">
-<div class="max-w-[1280px] mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8"><div class="w-full flex flex-col items-center gap-6">
+<div class="max-w-[1280px] mx-auto px-4 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8"><div class="w-full flex flex-col items-center gap-6">
 <div class="text-center">
 <p class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter">REAL FILM'S</p>
 <p class="text-xs text-on-surface-variant mt-1">  2024 REAL FILM'S. TODOS OS DIREITOS RESERVADOS.</p>
@@ -296,7 +296,7 @@
 </div></div>
 </footer>
 <!-- Persistent Floating WhatsApp -->
-<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" href="https://wa.me/5541998439673" target="_blank">
+<a class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[100] bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" href="https://wa.me/5541998439673" target="_blank">
 <svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.385 1.44 5.216 1.441 5.44 0 9.865-4.427 9.868-9.867 0-2.631-1.025-5.105-2.884-6.965-1.859-1.861-4.333-2.887-6.967-2.887-5.442 0-9.868 4.426-9.87 9.866 0 1.901.5 3.746 1.447 5.34l-1.003 3.666 3.753-.984z"></path></svg>
 <span class="absolute right-20 bg-surface text-on-surface px-4 py-2 rounded text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-primary-container/20 uppercase tracking-tighter">Fale Conosco</span>
 </a>
