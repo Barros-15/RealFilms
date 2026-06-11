@@ -9,7 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Montserrat:wght@700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="notice-open">
+  <div class="entry-notice" id="entry-notice" role="dialog" aria-modal="true" aria-label="Nota de esclarecimento">
+    <div class="entry-notice-card">
+      <button class="entry-notice-close" id="entry-notice-close" type="button" aria-label="Fechar aviso">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <img src="Fotos/Esclarecimento.jpeg" alt="Nota de esclarecimento oficial da Real Film's">
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="Ir para o início">
@@ -148,6 +157,14 @@
         </div>
         <div class="gallery-grid reveal">
           <img src="assets/stitch-image-13.jpg" alt="Projeto automotivo na Real Film's">
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Instalação de PPF">
+            <source src="Videos/instalçaoPPF.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Antes e depois do projeto">
+            <source src="Videos/AntesDepois.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
           <img src="Fotos/Galeria1.jpeg" alt="Projeto Real Film's 1">
           <img src="Fotos/Galeria2.jpeg" alt="Projeto Real Film's 2">
           <img src="Fotos/Galeria5.jpeg" alt="Projeto Real Film's 3">

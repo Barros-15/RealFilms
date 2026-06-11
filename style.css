@@ -36,6 +36,91 @@ body {
   line-height: 1.5;
 }
 
+body.notice-open {
+  overflow: hidden;
+}
+
+.entry-notice {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 4vw, 42px);
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at center, rgba(230, 0, 0, 0.16), transparent 48%),
+    rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.entry-notice.is-closing {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.entry-notice-card {
+  position: relative;
+  width: min(100%, 660px);
+  max-height: calc(100vh - clamp(32px, 8vw, 84px));
+  padding: clamp(7px, 1.2vw, 11px);
+  border: 1px solid rgba(230, 0, 0, 0.7);
+  border-radius: 6px;
+  background: linear-gradient(145deg, #2b2b2b, #0d0d0d);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.85),
+    0 0 34px rgba(230, 0, 0, 0.25);
+}
+
+.entry-notice-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--red), transparent 35%, var(--red-dark));
+  filter: blur(10px);
+  opacity: 0.45;
+}
+
+.entry-notice-card img {
+  width: 100%;
+  max-height: calc(100vh - clamp(46px, 10vw, 106px));
+  object-fit: contain;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.entry-notice-close {
+  position: absolute;
+  top: clamp(14px, 2vw, 20px);
+  right: clamp(14px, 2vw, 20px);
+  z-index: 2;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.9);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.entry-notice-close:hover,
+.entry-notice-close:focus-visible {
+  border-color: #fff;
+  background: var(--red);
+  outline: none;
+  transform: scale(1.08);
+}
+
 img,
 svg {
   display: block;
@@ -487,7 +572,8 @@ h2 span {
 
 .portrait-pair img,
 .map-card img,
-.gallery-grid img {
+.gallery-grid img,
+.gallery-grid video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -536,14 +622,20 @@ h2 span {
   gap: 16px;
 }
 
-.gallery-grid img {
+.gallery-grid img,
+.gallery-grid video {
   aspect-ratio: 3 / 4;
   background: var(--surface);
+}
+
+.gallery-grid img,
+.gallery-grid video {
   filter: grayscale(1);
   transition: filter 260ms ease, transform 260ms ease;
 }
 
-.gallery-grid img:hover {
+.gallery-grid img:hover,
+.gallery-grid video:hover {
   filter: grayscale(0);
   transform: scale(1.025);
 }

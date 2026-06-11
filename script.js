@@ -1,3 +1,26 @@
+const entryNotice = document.getElementById("entry-notice");
+const entryNoticeClose = document.getElementById("entry-notice-close");
+
+if (entryNotice && entryNoticeClose) {
+  entryNoticeClose.focus();
+
+  entryNoticeClose.addEventListener("click", () => {
+    entryNotice.classList.add("is-closing");
+    document.body.classList.remove("notice-open");
+
+    window.setTimeout(() => {
+      entryNotice.hidden = true;
+    }, 220);
+  });
+
+  entryNotice.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      entryNoticeClose.focus();
+    }
+  });
+}
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) entry.target.classList.add("active");
